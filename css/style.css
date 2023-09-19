@@ -1,12 +1,24 @@
 /*----------------------------- global -----------------------------*/
+:root {
+     --color-white: #fff;
+     --color-black: #212223 ;
+     --color-yellow: #fddf65;
+     --color-gray: #292a2c;
+}
+
 
 * {
      font-family: 'Poppins', sans-serif;
      scroll-behavior: smooth;
 }
 
+::selection {
+     background-color: var(--color-yellow);
+     color: var(--color-black);
+}
+
 h1, h2, h3 {
-     color: #fddf65;
+     color: var(--color-yellow);
 }
 
 h1 {
@@ -25,7 +37,7 @@ h3 {
 /*----------------------------- body -----------------------------*/
 
 body {
-     background-color: #212223;
+     background-color: var(--color-black);
      padding: 0px;
      margin: 0px;
 }
@@ -40,14 +52,14 @@ body {
      width: 100%;
      justify-content: center;
      align-items: center;
-     background-color: #292a2cb2;
+     background-color: #292a2cb2; /* transparent */
      backdrop-filter: blur(10px);
-     box-shadow: 0px 0px 10px 0px #00000064;
+     box-shadow: 0px 0px 10px 0px #000;
 }
 
 .titlepage {
      color: #ffff;
-     background-color: #212223;
+     background-color: var(--color-black);
      padding: 20px;
      margin: 100px 0px 50px 0px;
      max-width: 800px;
@@ -81,11 +93,11 @@ body {
 }
 
 .in-list-link {
-     color: #fff;
+     color: var(--color-white);
 }
 
 .in-list-link:focus {
-     color: #fddf65;
+     color: var(--color-yellow);
 }
 
 
@@ -94,8 +106,8 @@ body {
 .footer {
      left: 0;
      bottom: 0;
-     background-color: #292a2c;
-     color: #fff;
+     background-color: var(--color-gray);
+     color: var(--color-white);
      text-align: center;
      padding: 20px;
 }
@@ -109,6 +121,7 @@ body {
      justify-content: center;
      flex-wrap: wrap;
      list-style-type: none;
+     padding-left: 0px;
 }
 
 .footer ul li {
@@ -117,11 +130,12 @@ body {
 
 .footer ul li a {
      z-index: 1;
-     color: #fff;
+     color: var(--color-white);
      text-decoration: none;
      position: relative;
      padding: 10px;
      margin-bottom: 50px;
+     transition: background-color 0.3s;
 }
 
 .footer ul li a:hover::before {
@@ -132,13 +146,15 @@ body {
      right: 0;
      bottom: 0;
      left: 0;
-     background: #212223;
+     background: var(--color-black);
      border-radius: 10px;
+     transition: background-color 0.3s;
 }
 
 .footer ul li a:focus {
-     color: #212223;
+     color: var(--color-black);
      position: relative;
+     transition: background-color 0.3s;
  }
  
  .footer ul li a:focus::before {
@@ -149,8 +165,9 @@ body {
      right: 0;
      bottom: 0;
      left: 0;
-     background: #fddf65;
+     background: var(--color-yellow);
      border-radius: 10px;
+     transition: background-color 0.3s;
  }
  
 
