@@ -1,0 +1,159 @@
+/*----------------------------- global -----------------------------*/
+
+* {
+     font-family: 'Poppins', sans-serif;
+     scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+     color: #fddf65;
+}
+
+h1 {
+     font-size: xxx-large;
+}
+
+h2 {
+     font-size: xx-large;
+}
+
+h3 {
+     font-size: x-large;
+}
+
+
+/*----------------------------- body -----------------------------*/
+
+body {
+     background-color: #212223;
+     padding: 0px;
+     margin: 0px;
+}
+
+
+/*----------------------------- header -----------------------------*/
+
+.header {
+     position: fixed;
+     top: 0px;
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     background-color: #292a2cb2;
+     backdrop-filter: blur(10px);
+     box-shadow: 0px 0px 10px 0px #00000064;
+}
+
+.titlepage {
+     color: #ffff;
+     background-color: #212223;
+     padding: 20px;
+     margin: 150px 0px 100px 0px;
+     max-width: 800px;
+}
+ 
+ @media (min-width: 800px) {
+     .titlepage {
+         margin: 100px auto;
+     }
+}
+
+
+/*----------------------------- main list -----------------------------*/
+
+.main-list {
+     list-style-type: none;
+     margin-top: 50px;
+     padding: 0px;
+}
+
+.main-list li {
+     margin: 60px auto;
+}
+
+.main-list li h3 {
+     margin-bottom: 10px;
+}
+
+.main-list li ul li {
+     margin: 5px;
+}
+
+.in-list-link {
+     color: #fff;
+}
+
+.in-list-link:focus {
+     color: #fddf65;
+}
+
+
+/*----------------------------- footer -----------------------------*/
+
+.footer {
+     left: 0;
+     bottom: 0;
+     background-color: #292a2c;
+     color: #fff;
+     text-align: center;
+     padding: 20px;
+}
+
+.footer ul {
+     list-style-type: none;
+}
+
+.footer-links {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     list-style-type: none;
+}
+
+.footer ul li {
+     margin-bottom: 20px;
+}
+
+.footer ul li a {
+     z-index: 1;
+     color: #fff;
+     text-decoration: none;
+     position: relative;
+     padding: 10px;
+     margin-bottom: 50px;
+}
+
+.footer ul li a:hover::before {
+     z-index: -1;
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: #212223;
+     border-radius: 10px;
+}
+
+.footer ul li a:focus {
+     color: #212223;
+     position: relative;
+ }
+ 
+ .footer ul li a:focus::before {
+     z-index: -1;
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: #fddf65;
+     border-radius: 10px;
+ }
+ 
+
+.copyright {
+     margin-top: 30px;
+}
