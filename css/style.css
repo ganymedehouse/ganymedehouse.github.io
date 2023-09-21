@@ -8,7 +8,8 @@
      --bc-secondary-hover: #25252b;
      --bc-secondary-transparent: #212126bc;
      
-     --shadow: 0px 5px 5px 0px #00000072;
+     --shadow: 0px 3px 5px 0px #00000072;
+     --shadow-hover: 0px 3px 15px 0px #00000072;
 }
 
 
@@ -79,7 +80,11 @@ body {
  
 @media (min-width: 800px) {
      .titlepage {
-         margin: 100px auto -100px auto;
+         margin: 100px auto 50px auto;
+     }
+
+     .box-container {
+          margin: 100px auto;
      }
 }
 
@@ -120,7 +125,7 @@ body {
 
 .box-container .box:hover {
      background-color: var(--bc-secondary-hover);
-     box-shadow: 0px 5px 5px 5px #00000042;
+     box-shadow: var(--shadow-hover)
 }
 
 .box-container .box img {
@@ -137,12 +142,6 @@ body {
 .box-container a {
      text-decoration: none;
      color: var(--fc-primary);
-}
-
-@media (min-width: 800px) {
-     .box-container {
-         margin: 100px auto;
-     }
 }
 
 /*----------------------------- main list -----------------------------*/
