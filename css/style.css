@@ -8,8 +8,12 @@
      --bc-secondary-hover: #25252b;
      --bc-secondary-transparent: #212126bc;
      
-     --shadow: 0px 3px 5px 0px #00000072;
-     --shadow-hover: 0px 3px 15px 0px #00000072;
+     --shadow: 0 0.18rem 0.31rem 0 #00000072;
+     --shadow-hover: 0 0.18rem 0.93rem 0 #00000072;
+
+     --size-10: 0.625rem;
+     --size-20: 1.25rem;
+     --size-50: 3.125rem;
 }
 
 
@@ -25,19 +29,23 @@
 
 h1, h2, h3 {
      color: var(--fc-secondary);
-     margin-bottom: 0px;
+     margin-bottom: 0;
 }
 
 h1 {
-     font-size: xxx-large;
+     font-size: 3rem;
 }
 
 h2 {
-     font-size: xx-large;
+     font-size: 2rem;
 }
 
 h3 {
-     font-size: x-large;
+     font-size: 1.4rem;
+}
+
+p {
+     font-size: 1rem;
 }
 
 
@@ -45,8 +53,8 @@ h3 {
 
 body {
      background-color: var(--bc-primary);
-     padding: 0px;
-     margin: 0px;
+     padding: 0;
+     margin: 0;
 }
 
 
@@ -54,58 +62,48 @@ body {
 
 .header {
      position: fixed;
-     top: 0px;
+     top: 0;
      display: flex;
      width: 100%;
-     height: 60px;
+     height: 3.75rem;
      justify-content: center;
      align-items: center;
      background-color: var(--bc-secondary-transparent);
-     backdrop-filter: blur(10px);
+     backdrop-filter: blur(0.6rem);
      box-shadow: var(--shadow);
 }
 
 .logo img {
-     width: 150px;
+     width: 9.37rem;
      height: auto;
 }
 
 .titlepage {
      color: var(--fc-primary);
      background-color: var(--bc-primary);
-     padding: 20px;
-     margin: 100px 0px 50px 0px;
-     max-width: 800px;
-}
- 
-@media (min-width: 800px) {
-     .titlepage {
-         margin: 100px auto 50px auto;
-     }
-
-     .box-container {
-          margin: 100px auto;
-     }
+     padding: var(--size-20);
+     margin: 6.25rem 0 3.12rem 0;
+     max-width: 60rem;
 }
 
 
 /*----------------------------- boxes -----------------------------*/
 
 .box-container {
-     max-width: 800px;
+     max-width: 60rem;
      display: grid;
      grid-auto-flow: column;
-     grid-auto-columns: 300px;
+     grid-auto-columns: 19rem;
      overflow-x: auto;
-     padding: 20px;
-     gap: 20px;
+     padding: var(--size-20);
+     gap: var(--size-20);
      overscroll-behavior-inline: contain;
-     margin: -50px auto 100px auto;
+     margin: -3rem auto 6rem auto;
 }
 
 .snap-inline {
      scroll-snap-type: inline mandatory;
-     scroll-padding-inline: 20px;
+     scroll-padding-inline: var(--size-20);
 }
 
 .snap-inline * {
@@ -116,10 +114,10 @@ body {
      background-color: var(--bc-secondary);
      display: grid;
      grid-template-rows: min-content;
-     border-radius: 10px;
+     border-radius: var(--size-10);
      box-shadow: var(--shadow);
-     max-width: 300px;
-     min-height: 350px;
+     max-width: 19rem;
+     min-height: 22rem;
      transition: 0.3s;
 }
 
@@ -129,14 +127,14 @@ body {
 }
 
 .box-container .box img {
-     border-radius: 10px 10px 0px 0px;
+     border-radius: 0.6rem 0.6rem 0 0;
      inline-size: 100%;
      aspect-ratio: 16/9;
      object-fit: cover;
 }
 
 .box-container .box h3, .box-container .box p {
-     padding: 0px 20px;
+     padding: 0 var(--size-20);
 }
 
 .box-container a {
@@ -148,16 +146,16 @@ body {
 
 .main-list {
      list-style-type: none;
-     margin-top: 50px;
-     padding: 0px;
+     margin-top: var(--size-50);
+     padding: 0;
 }
 
 .main-list li {
-     margin: 60px auto;
+     margin: 3.75rem auto;
 }
 
 .main-list li h3 {
-     margin-bottom: 10px;
+     margin-bottom: var(--size-10);
 }
 
 .main-list li ul {
@@ -165,7 +163,7 @@ body {
 }
 
 .main-list li ul li {
-     margin: 10px;
+     margin: var(--size-10);
 }
 
 .in-list-link {
@@ -185,7 +183,7 @@ body {
      background-color: #212126;
      color: #fff;
      text-align: center;
-     padding: 20px;
+     padding: var(--size-20);
 }
 
 .footer h2 {
@@ -201,20 +199,20 @@ body {
      justify-content: center;
      flex-wrap: wrap;
      list-style-type: none;
-     padding-left: 0px;
+     padding-left: 0;
 }
 
 .footer ul li {
-     margin-bottom: 20px;
+     margin-bottom: var(--size-20);
 }
 
 .footer ul li a {
      color: #fff;
      text-decoration: none;
      position: relative;
-     padding: 10px;
-     margin-bottom: 50px;
-     border-radius: 10px;
+     padding: var(--size-10);
+     margin-bottom: var(--size-50);
+     border-radius: var(--size-10);
      transition: 0.3s;
 }
 
@@ -229,6 +227,15 @@ body {
  
 
 .copyright {
-     margin-top: 30px;
+     margin-top: 1.8rem;
      opacity: 0.5;
+}
+
+
+/*----------------------------- media -----------------------------*/
+
+@media (min-width: 60rem) {
+     .titlepage {
+         margin: 6.25rem auto 3.12rem auto;
+     }
 }
