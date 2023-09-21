@@ -6,7 +6,7 @@
      --color-gray: #212126;
      --color-gray-transparent: #212126bc;
      
-     --shadow: 0px 5px 10px 0px #000;
+     --shadow: 0px 5px 5px 0px #00000072;
 }
 
 
@@ -113,11 +113,12 @@ body {
      box-shadow: var(--shadow);
      max-width: 300px;
      min-height: 350px;
+     transition: 0.3s;
 }
 
 .box-container .box:hover {
-     background-color: #27272b;
-     box-shadow: 0px 10px 10px 5px #00000077;
+     background-color: var(--color-gray);
+     box-shadow: 0px 5px 5px 5px #00000072;
 }
 
 .box-container .box img {
@@ -203,45 +204,22 @@ body {
 }
 
 .footer ul li a {
-     z-index: 1;
      color: var(--color-white);
      text-decoration: none;
      position: relative;
      padding: 10px;
      margin-bottom: 50px;
-     transition: background-color 0.3s;
-}
-
-.footer ul li a:hover::before {
-     z-index: -1;
-     content: "";
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     background: var(--color-black);
      border-radius: 10px;
-     transition: background-color 0.3s;
+     transition: 0.3s;
 }
 
-.footer ul li a:focus {
+.footer ul li a:hover {
+     background-color: var(--color-black);
+}
+
+ .footer ul li a:focus {
      color: var(--color-black);
-     position: relative;
-     transition: background-color 0.3s;
- }
- 
- .footer ul li a:focus::before {
-     z-index: -1;
-     content: "";
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     background: var(--color-yellow);
-     border-radius: 10px;
-     transition: background-color 0.3s;
+     background-color: var(--color-yellow);
  }
  
 
