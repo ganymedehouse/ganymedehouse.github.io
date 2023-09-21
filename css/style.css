@@ -117,8 +117,8 @@ body {
 }
 
 .box-container .box:hover {
-     background-color: var(--color-gray);
-     box-shadow: 0px 5px 5px 5px #00000072;
+     background-color: #25252b;
+     box-shadow: 0px 5px 5px 5px #00000042;
 }
 
 .box-container .box img {
