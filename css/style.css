@@ -1,10 +1,12 @@
 /*----------------------------- global -----------------------------*/
 :root {
-     --color-white: #fff;
-     --color-black: #17171a ;
-     --color-yellow: #fddf65;
-     --color-gray: #212126;
-     --color-gray-transparent: #212126bc;
+     --fc-primary: #fff;
+     --fc-secondary: #fddf65;
+
+     --bc-primary: #17171a;
+     --bc-secondary: #212126;
+     --bc-secondary-hover: #25252b;
+     --bc-secondary-transparent: #212126bc;
      
      --shadow: 0px 5px 5px 0px #00000072;
 }
@@ -16,12 +18,12 @@
 }
 
 ::selection {
-     background-color: var(--color-yellow);
-     color: var(--color-black);
+     background-color: #fddf65;
+     color: #17171a;
 }
 
 h1, h2, h3 {
-     color: var(--color-yellow);
+     color: var(--fc-secondary);
      margin-bottom: 0px;
 }
 
@@ -41,7 +43,7 @@ h3 {
 /*----------------------------- body -----------------------------*/
 
 body {
-     background-color: var(--color-black);
+     background-color: var(--bc-primary);
      padding: 0px;
      margin: 0px;
 }
@@ -57,7 +59,7 @@ body {
      height: 60px;
      justify-content: center;
      align-items: center;
-     background-color: var(--color-gray-transparent);
+     background-color: var(--bc-secondary-transparent);
      backdrop-filter: blur(10px);
      box-shadow: var(--shadow);
 }
@@ -68,8 +70,8 @@ body {
 }
 
 .titlepage {
-     color: #ffff;
-     background-color: var(--color-black);
+     color: var(--fc-primary);
+     background-color: var(--bc-primary);
      padding: 20px;
      margin: 100px 0px 50px 0px;
      max-width: 800px;
@@ -106,7 +108,7 @@ body {
 }
 
 .box-container .box {
-     background-color: var(--color-gray);
+     background-color: var(--bc-secondary);
      display: grid;
      grid-template-rows: min-content;
      border-radius: 10px;
@@ -117,7 +119,7 @@ body {
 }
 
 .box-container .box:hover {
-     background-color: #25252b;
+     background-color: var(--bc-secondary-hover);
      box-shadow: 0px 5px 5px 5px #00000042;
 }
 
@@ -134,7 +136,7 @@ body {
 
 .box-container a {
      text-decoration: none;
-     color: var(--color-white);
+     color: var(--fc-primary);
 }
 
 @media (min-width: 800px) {
@@ -168,11 +170,11 @@ body {
 }
 
 .in-list-link {
-     color: var(--color-white);
+     color: var(--fc-primary);
 }
 
 .in-list-link:focus {
-     color: var(--color-yellow);
+     color: var(--fc-secondary);
 }
 
 
@@ -181,8 +183,8 @@ body {
 .footer {
      left: 0;
      bottom: 0;
-     background-color: var(--color-gray);
-     color: var(--color-white);
+     background-color: var(--bc-secondary);
+     color: var(--fc-primary);
      text-align: center;
      padding: 20px;
 }
@@ -204,7 +206,7 @@ body {
 }
 
 .footer ul li a {
-     color: var(--color-white);
+     color: var(--fc-primary);
      text-decoration: none;
      position: relative;
      padding: 10px;
@@ -214,12 +216,12 @@ body {
 }
 
 .footer ul li a:hover {
-     background-color: var(--color-black);
+     background-color: var(--bc-primary);
 }
 
  .footer ul li a:focus {
-     color: var(--color-black);
-     background-color: var(--color-yellow);
+     color: var(--bc-primary);
+     background-color: var(--fc-secondary);
  }
  
 
