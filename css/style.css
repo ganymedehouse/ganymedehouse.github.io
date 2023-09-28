@@ -14,6 +14,9 @@
      --size-10: 0.625rem;
      --size-20: 1.25rem;
      --size-50: 3.125rem;
+
+     --trans-dur-default: 0.7s;
+     --trans-dur-short: 0.3s;
 }
 
 
@@ -22,7 +25,8 @@
      scroll-behavior: smooth;
 }
 
-html, body { 
+html, body {
+     font-size: 1rem;
      -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
      -ms-text-size-adjust: none;
@@ -51,8 +55,10 @@ h3 {
      font-size: 1.4rem;
 }
 
-p, a {
-     font-size: 1rem;
+.fade-in {
+     opacity: 0;
+     transform: translateY(1.5rem);
+     transition: var(--trans-dur-default);
 }
 
 
@@ -64,7 +70,7 @@ body {
      margin: 0;
 }
 
-.header {
+.header:not(img) {
      position: fixed;
      top: 0;
      width: 100%;
@@ -72,9 +78,22 @@ body {
      display: flex;
      justify-content: center;
      align-items: center;
+     background-color: #00000000;
+     backdrop-filter: blur(0);
+     transition: var(--trans-dur-short);
+     box-shadow: 0 0 0 0 #00000000;
+     transition-delay: box-shadow var(--trans-dur-short);
+     transition: box-shadow var(--trans-dur-short);
+     z-index: 1; /*fade-in elements appear on top of it while transitioning opacity*/
+}
+
+.header.scrolled:not(img) {
      background-color: var(--bc-secondary-transparent);
      backdrop-filter: blur(0.6rem);
+     transition: var(--trans-dur-short);
      box-shadow: var(--shadow);
+     transition-delay: box-shadow var(--trans-dur-short);
+     transition: box-shadow var(--trans-dur-short);
 }
 
 .logo img {
@@ -121,7 +140,7 @@ body {
      box-shadow: var(--shadow);
      max-width: 19rem;
      min-height: 22rem;
-     transition: 0.3s;
+     transition: var(--trans-dur-short);
 }
 
 .box-container .box:hover {
@@ -156,12 +175,7 @@ body {
      margin: 3.75rem auto;
 }
 
-.main-list li ul {
-     list-style-type: decimal;
-     padding-left: 2rem;
-}
-
-.main-list li ul li {
+.main-list li ol li {
      margin: var(--size-10) auto;
 }
 
@@ -212,7 +226,7 @@ body {
      padding: var(--size-10);
      margin-bottom: var(--size-50);
      border-radius: var(--size-10);
-     transition: 0.3s;
+     transition: var(--trans-dur-short);
 }
 
 .footer-links li a:hover {

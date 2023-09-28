@@ -1,1 +1,1 @@
-Ganymede House Official Website
+Ganymede House official website
