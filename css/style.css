@@ -23,6 +23,7 @@
 * {
      font-family: 'Poppins', sans-serif;
      scroll-behavior: smooth;
+     -webkit-tap-highlight-color: transparent; /*remove tap highlight color*/
 }
 
 html, body {
