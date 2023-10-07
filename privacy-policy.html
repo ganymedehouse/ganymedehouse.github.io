@@ -155,13 +155,17 @@
                 <li><a href="mailto:ganymedehouse.sup@gmail.com">Contact Us</a></li>
             </ul>
             <div class="copyright">
-                <p>© 2023 Ganymede House, all rights reserved</p>
+                <p>© <span id="current-year"></span> Ganymede House, all rights reserved</p>
             </div>
         </footer>
         <!-- end footer -->
-
+        
         <!-- script -->
         <script>
+            // Update copyright to current year
+            const currentYear = new Date().getFullYear()
+            document.getElementById("current-year").textContent = currentYear
+            
             // dark/light theme
             function setTheme(theme) {
                 const root = document.documentElement;
@@ -189,31 +193,6 @@
             } else {
                 setTheme('light');
             }
-            
-            // boxes fade in transtion
-            const elements = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            });
-            elements.forEach((element) => {
-                observer.observe(element);
-            });
-
-            // header scroll transition
-            window.addEventListener('scroll', function() {
-                var scrollPosition = window.scrollY;
-                var header = document.querySelector('.header');
-                if (scrollPosition > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
         </script>
         <!-- end script -->
 

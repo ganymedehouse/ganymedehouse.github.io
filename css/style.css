@@ -56,12 +56,6 @@ h3 {
      font-size: 1.4rem;
 }
 
-.fade-in {
-     opacity: 0;
-     transform: translateY(1.5rem);
-     transition: var(--trans-dur-default);
-}
-
 
 /*----------------------------- body -----------------------------*/
 
@@ -79,22 +73,10 @@ body {
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: #00000000;
-     backdrop-filter: blur(0);
-     transition: var(--trans-dur-short);
-     box-shadow: 0 0 0 0 #00000000;
-     transition-delay: box-shadow background-color var(--trans-dur-short);
-     transition-property: box-shadow background-color;
-     z-index: 1; /*fade-in elements appear on top of it while transitioning opacity*/
-}
-
-.header.scrolled:not(img) {
      background-color: var(--bc-secondary-transparent);
-     backdrop-filter: blur(0.6rem);
+     backdrop-filter: blur(0.8rem);
      transition: var(--trans-dur-short);
      box-shadow: var(--shadow);
-     transition-delay: box-shadow background-color var(--trans-dur-short);
-     transition-property: box-shadow background-color;
 }
 
 .logo img {
