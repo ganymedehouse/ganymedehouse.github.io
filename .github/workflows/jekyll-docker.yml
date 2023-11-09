@@ -1,0 +1,15 @@
+name: Validate CluckNCade Password
+on: 
+  repository_dispatch:
+    types: [password_check]
+jobs:
+  check_password:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Validate password
+      run: |
+        if [ "${{ github.event.client_payload.password }}" == "981130" ]; then
+          echo "Password is correct!"
+        else
+          echo "Password is incorrect."
+        fi
