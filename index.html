@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- head -->
     <head>
-        <!-- meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="apple-mobile-web-app-title" content="Ganymede House">
-        <meta name="application-name" content="Ganymede House">
-        <meta name="msapplication-TileColor" content="#fddf65">
-        <meta name="theme-color" content="#fddf65">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#fddf65" />
         <title>Ganymede House</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- favicons -->
-        <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-        <link rel="manifest" href="images/favicons/site.webmanifest">
-        <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#e3a500">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
     </head>
+    <!-- end head -->
 
     <!-- body -->
     <body class="main-layout">
         <!-- header -->
-        <div class="header">
+        <header class="header">
             <div class="logo">
-                <a href="index.html"><img id="logo" src="images/dark_logo.png" alt="Ganymede House Logo"></a>
+                <a href="index.html"><img id="logo" src="images/dark_logo.png" alt="Ganymede House Logo" /></a>
             </div>
-        </div>
+        </header>
         <!-- end header -->
 
         <!-- titlepage -->
-        <div class="titlepage">
+        <main class="hero">
             <h1>Ganymede House</h1>
-            <p>
-            In the solitary realm of game development, Ganymede House stands as a lone sentinel. With a solitary creator's passion and a singular vision, we forge immersive gaming worlds that beckon players to escape reality.
-            </p>
-        </div>
+            <p>In the solitary realm of game development, Ganymede House stands as a lone sentinel. With a solitary creator's passion and a singular vision, we forge immersive gaming worlds that beckon players to escape reality.</p>
+        </main>
         <!-- end titlepage -->
-        
+
         <!-- boxes -->
         <div class="box-container snap-inline">
             <a href="https://play.google.com/store/apps/dev?id=7931465029638236259">
                 <div class="box">
-                    <img src="images/gaming_studio.png" alt="Gaming Studio" loading="lazy">
+                    <img src="images/gaming_studio.png" alt="Gaming Studio" loading="lazy" />
                     <h3>Our Apps & Games</h3>
                     <p>Check out our apps and games on the Play Store. Fun awaits!</p>
                 </div>
             </a>
             <a href="https://github.com/ganymedehouse/PCApps">
                 <div class="box">
-                    <img src="images/task_sense.png" alt="TaskSense" loading="lazy">
+                    <img src="images/task_sense.png" alt="TaskSense" loading="lazy" />
                     <h3>Try TaskSense for Windows</h3>
                     <p>Customizable Pomodoro timer, custom timer patters, and more!</p>
                 </div>
@@ -81,42 +65,39 @@
             </div>
         </footer>
         <!-- end footer -->
-        
+
         <!-- script -->
         <script>
             // Update copyright to current year
-            const currentYear = new Date().getFullYear()
-            document.getElementById("current-year").textContent = currentYear
-            
+            const currentYear = new Date().getFullYear();
+            document.getElementById("current-year").textContent = currentYear;
+
             // dark/light theme
             function setTheme(theme) {
                 const root = document.documentElement;
-                const image = document.getElementById('logo')
-                if (theme === 'dark') {
-                    root.style.setProperty('--fc-primary','#fff');
-                    root.style.setProperty('--fc-secondary','#fddf65');
-                    root.style.setProperty('--bc-primary','#17171a');
-                    root.style.setProperty('--bc-secondary','#212126');
-                    root.style.setProperty('--bc-secondary-hover','#25252b');
-                    root.style.setProperty('--bc-secondary-transparent','#212126bf');
-                    image.src = 'images/dark_logo.png';
+                const image = document.getElementById("logo");
+                if (theme === "dark") {
+                    root.style.setProperty("--fc-primary", "#fff");
+                    root.style.setProperty("--fc-secondary", "#fddf65");
+                    root.style.setProperty("--bc-primary", "#17171a");
+                    root.style.setProperty("--bc-secondary", "#212126");
+                    root.style.setProperty("--bc-secondary-hover", "#25252b");
+                    image.src = "images/dark_logo.png";
                 } else {
-                    root.style.setProperty('--fc-primary','#17171a');
-                    root.style.setProperty('--fc-secondary','#17171a');
-                    root.style.setProperty('--bc-primary','#fff');
-                    root.style.setProperty('--bc-secondary','#fff');
-                    root.style.setProperty('--bc-secondary-hover','#fddf65');
-                    root.style.setProperty('--bc-secondary-transparent','#ffffffca');
-                    image.src = 'images/light_logo.png';
+                    root.style.setProperty("--fc-primary", "#17171a");
+                    root.style.setProperty("--fc-secondary", "#17171a");
+                    root.style.setProperty("--bc-primary", "#fff");
+                    root.style.setProperty("--bc-secondary", "#fff");
+                    root.style.setProperty("--bc-secondary-hover", "#fddf65");
+                    image.src = "images/light_logo.png";
                 }
             }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme('dark');
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                setTheme("dark");
             } else {
-                setTheme('light');
+                setTheme("light");
             }
         </script>
         <!-- end script -->
-
     </body>
 </html>
